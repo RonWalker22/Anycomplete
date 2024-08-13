@@ -10,7 +10,7 @@
 local obj = {}
 
 -- Options
-obj.engine = "google"
+obj.engine = "duckduckgo"
 
 -- Metadata
 obj.name = "Anycomplete"
@@ -103,7 +103,7 @@ function obj:anycomplete()
 end
 
 function obj:bindHotkeys(mapping)
-    mapping = mapping or {{"cmd", "alt", "ctrl"}, "g"}
+    mapping = mapping or {{"cmd", "alt"}, "l"}
     hs.hotkey.bind(mapping[1], mapping[2], function() obj:anycomplete() end)
 end
 
